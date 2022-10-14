@@ -37,12 +37,12 @@ nav a:hover{
   text-decoration: wavy;
 }
 
-nav a:focus {
+/* nav a:focus {
   border-top: 2px solid #000000;
-}
+} */
 
 .skip a{
-  background: white;
+  background: #ffffff;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
@@ -63,6 +63,17 @@ nav a:focus {
   position: absolute;
 }
 
+/* .skip a:active {
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+} */
+
 /*Your code here*/
 /*reference: http://nemesisdesign.net/blog/accessibility/nice-css-skip-links-appearing-focus/*/
 /*Add the selector and rule to move the skip
@@ -71,7 +82,7 @@ link to the exact top of the page.*/
 /*Your code here*/
 /*Add the selector and code to put a 2px black
 border around all elements in focus.*/
-:focus {
+*:focus {
   border: 2px solid #000000;
 }
 
@@ -87,7 +98,7 @@ footer{
 nav{
   background-color: #ddd;
   padding: 20px 0;
-  text-align: center;
+  text-align: left;
   /*Your code here*/
   /*Span the top row*/
   grid-row: 1 / span 1;
@@ -185,7 +196,7 @@ header p{
     /* See documentation for desktop view */
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
-    /* grid-template-rows: 300px 300px 300px 300px; */
+    grid-template-rows: 70px repeat(5, 400px) 100px;
   }
 
   nav{
@@ -196,6 +207,7 @@ header p{
   }
 
   .skip a:focus {
+    position: absolute;
     left: 0;
     top: 20px;
   }
